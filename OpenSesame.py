@@ -126,7 +126,7 @@ canvas.create_window(10,10, anchor=NW, window=lovelineButton)
 lovelineButton.place(x=739,y=450)
 
 ''' COD '''
-codButton = Button(root, font=arial12, text="Call of Duty: MW2", padx=10,
+codButton = Button(root, font=arial12, text="Call of Duty", padx=10,
             pady=5, fg="white", bg="#5e5e5e", command=COD)
 codButton.configure(width=10, activebackground= '#33B5E5', relief=RAISED)
 canvas.create_window(10,10, anchor=NW, window=codButton)
