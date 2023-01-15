@@ -2,6 +2,7 @@ import os, webbrowser, subprocess
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
+# from EasyLogin import *
 
 # Functions
 # NOTE 1: 
@@ -33,10 +34,16 @@ def OpenNotepad():
     os.system('notepad.exe')
 
 def OpenGoogle():
-    subprocess.Popen("C:\Program Files (x86)\Google\Chrome\Application\chrome.exe")
+    #subprocess.Popen("C:\Program Files (x86)\Google\Chrome\Application\chrome.exe")
     #webbrowser.open('https://securelogon.boeing.com/GAS/#/login')
     #width100 ng-dirty ng-touched ng-invalid
-    #webbrowser.open('https://twitter.com/login')
+    twitter_login = 'https://twitter.com/login'
+    webbrowser.open(twitter_login)
+    xpath_userid = '//*[@id="react-root"]/div/div/div[2]/main/div/div/div[2]/form/div/div[1]/label/div/div[2]/div/input'
+    userid = driver.findElement(By.xpath(xpath_userid))
+    userid.sendKeys('123@gmail.com')
+
+
 
 def RocketLeague():
     webbrowser.open('steam://rungameid/252950')
@@ -59,15 +66,38 @@ def RedDead2():
 def Cities():
     webbrowser.open('steam://rungameid/255710')
 
-''' Example
+def RainbowSix():
+    webbrowser.open('steam://rungameid/359550')
+
+def GTAfive():
+    webbrowser.open('steam://rungameid/271590')
+
+def Loveline():
+    classicLoveline = r'https://www.youtube.com/channel/UCcaYdF2OFL6WgERNmKmIBXg'
+    webbrowser.open(classicLoveline)
+
+def Mordhau():
+    webbrowser.open('steam://rungameid/629760')
+
+def COD():
+    webbrowser.open('steam://rungameid/1938090')
+
+def Skyrim():
+    webbrowser.open('steam://rungameid/489830')
+
+def Rust():
+    webbrowser.open('steam://rungameid/252490')
+
+'''Example
 
     Even if correct, leave out, git commit, change, commit again?
 
 NOTE: Make two classes, call one in the other
         1st: Functions being called with their respective execution.
         2nd: Those functions being put in a dictionary with their
-                respective string text name. 
+                respective string text name. e
 
+# 
 class buttonExecutables:
 
     def __init__(self, executable):
@@ -76,11 +106,14 @@ class buttonExecutables:
         # NOTE: Dictionary that maps string text name to function?
         executable = {
 
-                notepad     =   OpenNotepad(),
-                google      =   OpenGoogle()
-                etc         =   etc  
+                'notepad'     :   selectedProcesses.OpenNotepad(),
+                'google'      :   selectedProcesses.OpenGoogle(),
+                'Cities'      :   selectedProcesses.Cities()  
 
         }
+
+# List of callable processes.
+class selectedProcesses:
 
     def OpenNotepad():
         os.system('notepad.exe')
@@ -111,3 +144,4 @@ class buttonExecutables:
 
     def Cities():
         webbrowser.open('steam://rungameid/255710')
+'''

@@ -1,7 +1,7 @@
 #!usr/bin/env python3
 from tkinter import *
 from tkinter import font as tkFont
-from PIL import ImageTk, Image
+from PIL import ImageTk, Image  # Changed PIL to pillow
 from OpenSesameFunctions import *
 
 # Variable initialization
@@ -32,7 +32,7 @@ canvas.pack()
 #263D42 - dark grey / black
 
 # Application Background Imaging
-path = './OpenSesame_PatrickStar2.jpg'
+path = r'./OpenSesame_PatrickStar2.jpg'
 img = ImageTk.PhotoImage(Image.open(path))
 Patrick = Label(root, image=img, bg="#5e5e5e", highlightthickness=0.75)
 Patrick.place(x=0,y=0)
@@ -103,6 +103,48 @@ citiesButton = Button(root, font=arial12, text="CITIES", padx=10,
 citiesButton.configure(width=10, activebackground= '#33B5E5', relief=RAISED)
 canvas.create_window(10,10, anchor=NW, window=citiesButton)
 citiesButton.place(x=739,y=400)
+
+''' RAINBOW SIX: SIEGE '''
+r6Button = Button(root, font=arial12, text="Rainbow 6: Siege", padx=10,
+            pady=5, fg="white", bg="#5e5e5e", command=RainbowSix)
+r6Button.configure(width=10, activebackground= '#33B5E5', relief=RAISED)
+canvas.create_window(10,10, anchor=NW, window=r6Button)
+r6Button.place(x=450,y=450)
+
+''' GTA V '''
+gtaVButton = Button(root, font=arial12, text="GTA V", padx=10,
+            pady=5, fg="white", bg="#5e5e5e", command=GTAfive)
+gtaVButton.configure(width=10, activebackground= '#33B5E5', relief=RAISED)
+canvas.create_window(10,10, anchor=NW, window=gtaVButton)
+gtaVButton.place(x=595,y=450)
+
+''' LOVELINE '''
+lovelineButton = Button(root, font=arial12, text="Loveline", padx=10,
+            pady=5, fg="white", bg="#5e5e5e", command=Loveline)
+lovelineButton.configure(width=10, activebackground= '#33B5E5', relief=RAISED)
+canvas.create_window(10,10, anchor=NW, window=lovelineButton)
+lovelineButton.place(x=739,y=450)
+
+''' COD '''
+codButton = Button(root, font=arial12, text="Call of Duty: MW2", padx=10,
+            pady=5, fg="white", bg="#5e5e5e", command=COD)
+codButton.configure(width=10, activebackground= '#33B5E5', relief=RAISED)
+canvas.create_window(10,10, anchor=NW, window=codButton)
+codButton.place(x=450,y=500)
+
+''' SKYRIM '''
+rd2Button = Button(root, font=arial12, text="Skyrim", padx=10,
+            pady=5, fg="white", bg="#5e5e5e", command=RedDead2)
+rd2Button.configure(width=10, activebackground= '#33B5E5', relief=RAISED)
+canvas.create_window(10,10, anchor=NW, window=rd2Button)
+rd2Button.place(x=595,y=500)
+
+''' RUST '''
+citiesButton = Button(root, font=arial12, text="Rust", padx=10,
+            pady=5, fg="white", bg="#5e5e5e", command=Cities)
+citiesButton.configure(width=10, activebackground= '#33B5E5', relief=RAISED)
+canvas.create_window(10,10, anchor=NW, window=citiesButton)
+citiesButton.place(x=739,y=500)
 
 ''' EXIT APPLICATION '''
 def ExitApp():
