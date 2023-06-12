@@ -1,4 +1,5 @@
 import os, webbrowser, subprocess
+from datetime import datetime
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
@@ -28,10 +29,21 @@ import time
 # business savvy friends. 
 
 # NOTE 6: Last unrelated note -- invest in stocks, take risks. 
-# You only lose what you don't try. 
+# You only lose what you don't try.
+
 
 def OpenNotepad():
     os.system('notepad.exe')
+    now = datetime.now()
+    instanceNotification = "Opening Notepad at {0} on {1}".format(
+                                    str(now.strftime('%c')),
+                                    str(now.strftime('%A')),
+                                    # str(now.day),
+                                    # str(now.year)
+                                                                    )
+    return print(instanceNotification)
+# Need to add strftime for Weekday Name for {1}
+
 
 def OpenGoogle():
     #subprocess.Popen("C:\Program Files (x86)\Google\Chrome\Application\chrome.exe")
