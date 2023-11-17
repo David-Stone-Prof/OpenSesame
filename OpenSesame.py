@@ -134,17 +134,24 @@ codButton.place(x=450,y=500)
 
 ''' SKYRIM '''
 rd2Button = Button(root, font=arial12, text="Skyrim", padx=10,
-            pady=5, fg="white", bg="#5e5e5e", command=RedDead2)
+            pady=5, fg="white", bg="#5e5e5e", command=Skyrim)
 rd2Button.configure(width=10, activebackground= '#33B5E5', relief=RAISED)
 canvas.create_window(10,10, anchor=NW, window=rd2Button)
 rd2Button.place(x=595,y=500)
 
-''' RUST '''
-citiesButton = Button(root, font=arial12, text="Rust", padx=10,
-            pady=5, fg="white", bg="#5e5e5e", command=Cities)
-citiesButton.configure(width=10, activebackground= '#33B5E5', relief=RAISED)
-canvas.create_window(10,10, anchor=NW, window=citiesButton)
-citiesButton.place(x=739,y=500)
+''' Kingdom Come Deliverance '''
+kingdomcomeButton = Button(root, font=arial12, text="Kingdom Come", padx=10,
+            pady=5, fg="white", bg="#5e5e5e", command=KingdomCome)
+kingdomcomeButton.configure(width=10, activebackground= '#33B5E5', relief=RAISED)
+canvas.create_window(10,10, anchor=NW, window=kingdomcomeButton)
+kingdomcomeButton.place(x=739,y=500)
+
+# ''' RUST '''
+# citiesButton = Button(root, font=arial12, text="Rust", padx=10,
+#             pady=5, fg="white", bg="#5e5e5e", command=Cities)
+# citiesButton.configure(width=10, activebackground= '#33B5E5', relief=RAISED)
+# canvas.create_window(10,10, anchor=NW, window=citiesButton)
+# citiesButton.place(x=739,y=500)
 
 ''' EXIT APPLICATION '''
 def ExitApp():

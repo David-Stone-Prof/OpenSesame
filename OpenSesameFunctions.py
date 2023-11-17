@@ -100,6 +100,10 @@ def Skyrim():
 def Rust():
     webbrowser.open('steam://rungameid/252490')
 
+def KingdomCome():
+    webbrowser.open('steam://rungameid/379430')
+
+
 '''Example
 
     Even if correct, leave out, git commit, change, commit again?
