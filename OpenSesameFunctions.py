@@ -85,8 +85,9 @@ def GTAfive():
     webbrowser.open('steam://rungameid/271590')
 
 def Loveline():
-    classicLoveline = r'https://www.youtube.com/channel/UCcaYdF2OFL6WgERNmKmIBXg'
-    webbrowser.open(classicLoveline)
+    # classicLoveline = r'https://www.youtube.com/channel/UCcaYdF2OFL6WgERNmKmIBXg'
+    # webbrowser.open(classicLoveline)
+    webbrowser.open(r'D:\Python_Repos\Loveline\LovelineApp.exe')
 
 def Mordhau():
     webbrowser.open('steam://rungameid/629760')
